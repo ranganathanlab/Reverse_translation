@@ -1,6 +1,6 @@
-lib=fastaread('/Users/xinran/Documents/sh3_remove_dup/design_oligos/localkeep_New_Proteins.fasta');
-localgene = load('local_gene.mat').gene;
-hits=blastreadlocal('/Users/xinran/Documents/sh3_remove_dup/design_oligos/blast_local2.txt', 8);
+lib=fastaread('Inputs/localkeep_New_Proteins.fasta');
+localgene = load('Inputs/local_gene.mat').gene;
+hits=blastreadlocal('Inputs/blast_local2.txt', 8);
 
 for i=1:numel(lib)
 seq=lib(i).Sequence; 
@@ -63,7 +63,7 @@ end
 %lib(32).dna(45)='G';
 %lib(81).dna(42)='A';
 lib1=lib;
-save('lib_local.mat','lib')
+save('Outputs/lib_local.mat','lib')
 
 sc_codon_usage = load('s_cerevisiae_codon_usage.mat').sc_codon_usage;
 codon_freq = sc_codon_usage.codon_frequencies;
