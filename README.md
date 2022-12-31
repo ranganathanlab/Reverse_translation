@@ -29,9 +29,9 @@ Plasmid sequence maps will be uploaded later.
 
 ## SH3 oligo specification
 ---
-**Oligo sequence structure**
+**Oligo sequence structure** (300 mer)
 ![oligo sequence structure](oligos300mer.png)
 
 ---
-**check oligo workflow**
+**check oligo workflow** (300 mer)
 ![check oligo workflow](seq_structure_check.png)
