@@ -1,6 +1,6 @@
 lib=fastaread('Outputs/localkeep_New_Proteins.fasta');
-localgene = load('Inputs/local_gene.mat').gene;
-hits=blastreadlocal('Inputs/blast_local2.txt', 8);
+localgene = load('Outputs/local_gene.mat').gene;
+hits=blastreadlocal('Inputs/blast_local.txt', 8);
 
 for i=1:numel(lib)
 seq=lib(i).Sequence; 
@@ -38,9 +38,9 @@ per(j)=hits(i).Hits(j).HSPs(1).Identities(1).Percent;
             sequence{i}=localgene(i,region(1):region(2));
         end
         
-        if i==1
-            sequence{i} = 'aatttcatttacaaggcaaaagcactgtacccatacgacgctgatgacgatgatgcttacgaaatctcatttgaacaaaatgaaatcctacaagtctctgacattgaaggcagatggtggaaggcaagaagggcaaacggtgaaacaggtattattccaagcaattatgttcaactaatcgatggt';
-        end
+        %if i==1
+        %    sequence{i} = 'aatttcatttacaaggcaaaagcactgtacccatacgacgctgatgacgatgatgcttacgaaatctcatttgaacaaaatgaaatcctacaagtctctgacattgaaggcagatggtggaaggcaagaagggcaaacggtgaaacaggtattattccaagcaattatgttcaactaatcgatggt';
+        %end
         
         prot{i}=nt2aa(sequence{i},'AlternativeStartCodons','False','ACGTOnly','False');
         [a1,a2,a3]=nwalign(lib(i).Sequence, prot{i});
