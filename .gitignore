@@ -1,0 +1,4 @@
+Outputs/
+.ipynb_checkpoints
+__pycache__/
+Inputs/blast_local.txt
