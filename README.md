@@ -28,8 +28,10 @@ Plasmid sequence maps will be uploaded later.
 | remove_gap_fasta.py | Script to remove gaps from input file |
 
 ## SH3 oligo specification
-
+---
 **Oligo sequence structure**
 ![oligo sequence structure](oligos300mer.png)
+
+---
 **check oligo workflow**
 ![check oligo workflow](seq_structure_check.png)
