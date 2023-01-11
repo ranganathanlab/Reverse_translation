@@ -11,7 +11,7 @@ Reverse translation to design gene oligos from protein sequences used in https:/
 
 Structure of the plasmid (*PRS316*) is depicted in
 
-Zarrinpar, A., Park, S. H., & Lim, W. A. (2003). Optimization of specificity in a cellular protein interaction network by negative selection. Nature, 426(6967), 676-680.
+* Zarrinpar, A., Park, S. H., & Lim, W. A. (2003). Optimization of specificity in a cellular protein interaction network by negative selection. Nature, 426(6967), 676-680.
 https://www.nature.com/articles/nature02178
 
 In case expresison level check is necessary, C-termial GFP fusion is not removed. This can be done by adding a stop codon before EcoR1. Complete plasmid sequence maps will be uploaded later.
@@ -24,6 +24,13 @@ We compare codon mismatches between designed proteins and their closest natural 
 * Ensure there is no restriction enzyme sites in the coding region. Specially, codons of specific amino acids at both terminals were fixed.
 
 
+## Required dependencies
+
+Softwares: BLAST, MATLAB
+
+Python modules: BioPython, numpy, scipy, pandas, matplotlib
+
+
 ## Getting Started
 
 |            |                                                         |
@@ -34,12 +41,6 @@ We compare codon mismatches between designed proteins and their closest natural 
 | Reverse_translation_300mer.ipynb    | Notebook for reverse translation, plase follow instruction inside  |
 | local.m | See instructions in *Reverse_translation_300mer.ipynb*   |
 | remove_gap_fasta.py | Script to remove gaps from input file |
-
-**Required dependencies**
-
-Softwares: BLAST, MATLAB
-
-Python modules: BioPython, numpy, scipy, pandas, matplotlib
 
 
 ## SH3 oligo specification
